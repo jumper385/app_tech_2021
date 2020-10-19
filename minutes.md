@@ -1,0 +1,31 @@
+# Actions
+- [ ] Build speeches for Tuesday
+- [ ] Query Adi Bambang on a personal lab OR use makers
+- [ ] Mention New Meeting Location
+- [ ] Log into official app tech email
+- [ ] Ask any for projects for next year
+# Upcoming Meetings
+- [x] Handover Meeting 12 PM Monday
+- [ ] App Tech Full Team Meeting 11 AM - 12 AM Tuesday
+- [ ] AGM 4:30 PM Tuesday
+# Meeting Agenda Suggestions
+- [ ] Retreat Mentions
+- [ ] Discord Change? Please!
+- [ ] Summer Workshop
+- [ ] To catch up with how both teams (elec and mech) are progressing
+- [ ] Who's continuing in Apptech after exams to finish our project, and who's continuing in Apptech next year?
+- [ ] What the new cocos are going to be bringing to the team, and our vision for next year.
+- [ ] What you want from next year, and any ideas you have? --> (what type of project we're doing next year!)
+# General Notes
+- Group meetings must be less than an hour
+- Organise Workshop w/ Git and Python Analysis
+- Use box for offical documents to national etc. (i.e. reimbursement)
+- Choose team leads for electrical teams
+- ENSURE SAFETY PROTOCOLS UNLESS ALREADY ESTABLISHED BY 3 RD PARTY
+- Always use standard project management protocol and safety protocols
+- Nudge people and hold people accountable - DEADLINES PLEASE
+- EWB National Contacts
+    - They've all moved to slack so go there to ask questions
+    - Andy is the go to person to meet
+    - Mitra is business advisor
+- Decide on Welfare Officer
