@@ -74,7 +74,7 @@ A function that moves the selected `filename` from `root/${folder_from}` to `roo
 ### Returns
 `NONE` 
 
-## `Future<void> delete_filename(filename, folder)`
+## `Future<void> delete_file(filename, folder)`
 ### Description
 A function that deletes a specific `filename` from a specified `folder` path. We will use this to delete folders which have been successfully uploaded OR contain data that has no sufficient movement being logged.
 ## Parameters
