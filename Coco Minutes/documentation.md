@@ -64,7 +64,7 @@ This function changes the widget state variable that controls the filename we ar
 ### Returns
 - `last_filename (String)` The filename of the file we last wrote into
 
-## `Future<void> move_to_upload(filename, folder_from, folder_to)`
+## `Future<void> move_file(filename, folder_from, folder_to)`
 ### Description
 A function that moves the selected `filename` from `root/${folder_from}` to `root/${folder_to}`. This function will be used to move files from the `root/compile` to `root/upload` folder.
 ### Parameters
