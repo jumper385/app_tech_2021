@@ -1,11 +1,87 @@
-# Documentation
+# Helper Functions
 
-## `get_accel()`
+## `get_accel(accelStream)`
 ### Description
 Gets data from accelerometer
 ### Parameters
-- `accelerometerStream`: The accelerometer stream object that we have to listen to
+- `accelStream`: The accelerometer stream object that we have to listen to
 ### Returns
-- `[acc_x, acc_y, acc_z]`: single x, y, z values of accelerometer data.
+- `[acc_x, acc_y, acc_z]`: single array consisting of x, y and z values from accelerometer data.
 
-##
+## `get_gps(gpsObject)`
+### Description
+Gets data from the GPS
+### Parameters
+- `gpsObject`: The GPS object provided by the library you will be using to get the GPS data.
+### Returns
+- `[latitude, longitude]`: single array consisting of latitude and longitude
+
+## `write_file(array, data_type, filename)`
+### Description
+Gets an input array of arbitrary length and writes to the `filename` with the following structure: 
+```
+[
+    vehicle_id(String), # A string containing the vehicle id
+    datapoint_id(String), # A datapoint id to locate this specific datapoint
+    timestamp(String), # Timestamp of the datapoint
+    content(String) # A string of comma separated values (i.e. array of data [arr1, arr2, arr3] is sent as "arr1,arr2,arr3")
+]
+```
+The function must then write to a new line in the file of `filename` (look into `writeln` method [here](https://api.dart.dev/stable/2.10.4/dart-io/Stdout/writeln.html))
+
+The file contents upon upload should look like this
+```
+[...datapoint1]
+\n
+[...datapoint2]
+\n
+[...datapoint3]
+\n
+...
+[...datapointx]
+```
+### Parameters
+- `array (Array)`: array of data
+- `data_type (String)`: the type of data we are writing (i.e. accelerometer or gps)
+- `filename (String)`: the filename we are writing to
+
+### Output
+`NONE`
+
+## `generate_filename`
+### Description
+Generates a random filename string. We suggest using UUID v4 to generate the filename. More information can be found [here](https://pub.dev/packages/uuid)
+### Parameters
+`NONE`
+### Returns
+- `filename (String)`: A unique filename ID
+
+## `change_filename(new_filename)`
+### Description
+This function changes the widget state variable that controls the filename we are writing to `new_filename` whilst also returning the previous filename for reference in the future.
+### Parameters
+`NONE`
+### Returns
+- `last_filename (String)` The filename of the file we last wrote into
+
+## `move_to_upload(filename, folder_from, folder_to)`
+### Description
+A function that moves the selected `filename` from `root/${folder_from}` to `root/${folder_to}`. This function will be used to move files from the `root/compile` to `root/upload` folder.
+### Parameters
+- `filename (String)`: the target filename we want to move
+- `folder_from (String)`: the target folder the file is in
+- `folder_to (String)`: the target folder we want to move the file into
+### Returns
+`NONE` 
+
+## `delete_filename(filename, folder)`
+### Description
+A function that deletes a specific `filename` from a specified `folder` path. We will use this to delete folders which have been successfully uploaded OR contain data that has no sufficient movement being logged.
+## Parameters
+- `filename (String)`: The target filename
+- `folder (String)`: The target folder path
+## Returns
+`NONE`
+
+## `check_folder_empty(folder)`
+A function that checks if a folder is empty
