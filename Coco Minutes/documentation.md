@@ -115,5 +115,12 @@ This function should send the contents of the `filename` inside a `folder` path 
 ### Returns
 - `response (String)`: A string of the response from the server
 
-# Higher Level Functions
-## `accel_handler(accelStream, delay_millis)`
+## Future<Boolean> movement_detection(filename, folder, distance_threshold)
+### Description
+Analyses the GPS data within `filename` in `folder` path and find the maximum distance from the first datapoint. If it is less than `distance_threshold`, return `false` else, return `true`. 
+### Parameters
+- `filename (String)`: the filename of the target file
+- `folder (String)`: the folder in which the file is located in
+- `distance_threshold (Double)`: The minimum threshold displacement of a point that must be exceeded for the function to consider movement within the recorded file 
+### Returns
+- `movement_detected (Boolean)` `true` if maximum displacement exceeds the threshold distance else `false`
