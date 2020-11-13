@@ -114,3 +114,6 @@ This function should send the contents of the `filename` inside a `folder` path 
 - `folder (String)`: The path the `filename` exists in
 ### Returns
 - `response (String)`: A string of the response from the server
+
+# Higher Level Functions
+## `accel_handler(accelStream, delay_millis)`
