@@ -1,6 +1,6 @@
 # Helper Functions
 
-## `get_accel(accelStream)`
+## `List get_accel(accelStream)`
 ### Description
 Gets data from accelerometer
 ### Parameters
