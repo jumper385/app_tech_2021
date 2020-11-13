@@ -8,7 +8,7 @@ Gets data from accelerometer
 ### Returns
 - `[acc_x, acc_y, acc_z]`: single array consisting of x, y and z values from accelerometer data.
 
-## `get_gps(gpsObject)`
+## `Future<List> get_gps(gpsObject)`
 ### Description
 Gets data from the GPS
 ### Parameters
@@ -16,7 +16,7 @@ Gets data from the GPS
 ### Returns
 - `[latitude, longitude]`: single array consisting of latitude and longitude
 
-## `write_file(array, data_type, filename)`
+## `Future<void> write_file(array, data_type, filename)`
 ### Description
 Gets an input array of arbitrary length and writes to the `filename` with the following structure: 
 ```
@@ -48,7 +48,7 @@ The file contents upon upload should look like this
 ### Output
 `NONE`
 
-## `generate_filename`
+## `String generate_filename()`
 ### Description
 Generates a random filename string. We suggest using UUID v4 to generate the filename. More information can be found [here](https://pub.dev/packages/uuid)
 ### Parameters
@@ -56,7 +56,7 @@ Generates a random filename string. We suggest using UUID v4 to generate the fil
 ### Returns
 - `filename (String)`: A unique filename ID
 
-## `change_filename(new_filename)`
+## `String change_filename(new_filename)`
 ### Description
 This function changes the widget state variable that controls the filename we are writing to `new_filename` whilst also returning the previous filename for reference in the future.
 ### Parameters
@@ -64,7 +64,7 @@ This function changes the widget state variable that controls the filename we ar
 ### Returns
 - `last_filename (String)` The filename of the file we last wrote into
 
-## `move_to_upload(filename, folder_from, folder_to)`
+## `Future<void> move_to_upload(filename, folder_from, folder_to)`
 ### Description
 A function that moves the selected `filename` from `root/${folder_from}` to `root/${folder_to}`. This function will be used to move files from the `root/compile` to `root/upload` folder.
 ### Parameters
@@ -74,7 +74,7 @@ A function that moves the selected `filename` from `root/${folder_from}` to `roo
 ### Returns
 `NONE` 
 
-## `delete_filename(filename, folder)`
+## `Future<void> delete_filename(filename, folder)`
 ### Description
 A function that deletes a specific `filename` from a specified `folder` path. We will use this to delete folders which have been successfully uploaded OR contain data that has no sufficient movement being logged.
 ## Parameters
@@ -83,5 +83,34 @@ A function that deletes a specific `filename` from a specified `folder` path. We
 ## Returns
 `NONE`
 
-## `check_folder_empty(folder)`
-A function that checks if a folder is empty
+## `Future<Boolean> check_folder_empty(folder)`
+A function that checks if the `folder` path is empty
+### Parameters
+- `folder (String)`: Which folder to look in
+### Returns
+- `is_empty(Boolean)`: A boolean which is `true` when the folder is empty and `false` if it contains files
+
+## `is_connected()`
+A function that checks if there is cellular connection
+### Parameters
+`NONE`
+### Returns
+- `has_connection (Boolean)`: A boolean which is `true` if the there is an active connection and `false` if no connection is present.
+
+## `Future<List> get_file_list(folder)`
+A function that looks into a folder and returns an array containing a list of filenames present within the `folder` path. This should return a list as follows:
+`[fn1, fn2, fn3, ... fnN]`
+### Parameters
+- `folder (String)`: A string cointaining the target `folder` path to look at
+### Returns
+- `file_list (String)`: A list of files present inside the folder
+
+## `Future<List> upload_file(url, filename, folder)`
+### Description
+This function should send the contents of the `filename` inside a `folder` path to a `url` via an `HTTP:POST` request. We advise it be a `Future` function that returns a `String` of the response which can be used for future reference later.
+### Parameters
+- `url (String)`: The url endpoint we want to `POST` to
+- `filename (String)`: The name of the file we want to upload 
+- `folder (String)`: The path the `filename` exists in
+### Returns
+- `response (String)`: A string of the response from the server
