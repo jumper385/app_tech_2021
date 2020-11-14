@@ -21,7 +21,8 @@ Gets data from the GPS
 Gets an input array of arbitrary length and writes to the `filename` with the following structure: 
 ```
 [
-    vehicle_id(String), # A string containing the vehicle id
+    vehicle_id(String), # A string containing the vehicle id,
+    data_type(String), # A string describing what the datatype is i.e. gps or accel
     datapoint_id(String), # A datapoint id to locate this specific datapoint
     timestamp(String), # Timestamp of the datapoint
     content(String) # A string of comma separated values (i.e. array of data [arr1, arr2, arr3] is sent as "arr1,arr2,arr3")
