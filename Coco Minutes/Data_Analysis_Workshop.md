@@ -10,7 +10,7 @@
 - 16:00 - 19:00 --> project work (3 groups each with an elec member: Jamir, Carmen, Robert - Henry to walk around and help), each group will work to gather data and decide which of accellerometer or gps data is best at telling you whether you are running or walking
 - 19:00 - 19:30 --> team presentations
 
-## Revised Timeline for Workshop 15th December##
+## Revised Timeline for Workshop 15th December ##
 - 13:30 - 14:00 --> Final team prep and checklist for meeting with national, get set up in the room, flash the app onto the phones.
 - 14:00 - 15:00 --> Handover meeting with national.
 - 15:00 - 15:15 --> Ensure everyone has app on phones, go for a break by walking (and running) around campus
