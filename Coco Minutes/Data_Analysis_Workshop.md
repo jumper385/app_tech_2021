@@ -19,4 +19,4 @@
 - 16:30 - 18:30 --> Split into two project groups and complete project
 - 18:30 - 18:45 --> team presentations
 - 18:45 - 19:00 --> pack up and head to Varsity for dinner
-- 19:00 - late --> dinnet at Varsity
+- 19:00 - late --> end of year dinner at Varsity
