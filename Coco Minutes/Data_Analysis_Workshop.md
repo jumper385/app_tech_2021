@@ -16,7 +16,7 @@
 - 15:00 - 15:15 --> Ensure everyone has app on phones, go for a break by walking (and running) around campus
 - 15:15 - 16:15 Jupyter Notebook installation, basic rundown of python, and the requests and pandas libraries
 - 16:15 - 16:30 --> break
-- 16:30 - 18:30 --> Split into two project groups and complete project
+- 16:30 - 18:30 --> Split into two project groups and complete mini project
 - 18:30 - 18:45 --> team presentations
 - 18:45 - 19:00 --> pack up and head to Varsity for dinner
 - 19:00 - late --> end of year dinner at Varsity
