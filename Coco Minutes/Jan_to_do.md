@@ -6,3 +6,4 @@
 - [] Move app to EWB repo --> Robert
 - [] Meet Matt to discuss changing web server to theirs --> Henry
 - [] Meeting to get the team up to speed (early Jan) --> Cocos organise
+- [] Meeting with National (end of Jan)
